@@ -1,0 +1,122 @@
+.modal{
+
+    &-None{
+    display: none;
+    & + .modal-card{
+        display: none;
+    }
+    }
+
+    &-View{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .5;
+
+    display: block; 
+    
+    & + .modal-card{
+        display: flex;
+    }
+    @media (max-width: 59.35em) {
+        width: 100vw;
+        height: 140vh;
+        background-color: black;
+        opacity: .5; 
+        & + .modal-card{
+            display: flex;
+        }
+    }
+
+    }
+
+    &-card{
+        position: absolute;
+        height: 50rem;
+        width: 50rem;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        display: none;
+        flex-direction: column;
+        .close{
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-end;
+            padding-right: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: rgb(209, 215, 219);
+        }
+        .image{
+            height: 28rem;
+            width: 50rem;
+            &-item{
+                height: 28rem;
+                width: 50rem;
+            }
+        }
+        .context{
+            height: 30rem;
+            margin: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .content{
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 59.35em) {
+            height: 30rem;
+            width: 30rem;
+            .image{
+                height: 20rem;
+                width: 30rem;
+                &-item{
+                    height: 20rem;
+                    width: 30rem;
+                }
+            }
+            .context{
+                .content{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    
+}
+
+h1{
+    font-size: 16px;
+}
+p{
+    font-size: 8.5px;
+    color: rgb(184, 189, 196);
+}
+
+.author{
+    display: flex;
+    &--avatar{
+        height: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    p{
+        margin-left: 1rem;
+    }
+    @media (max-width: 59.35em) {
+        align-items: center;
+        p{
+            margin-left: 1rem;
+            font-size: 12px;
+        }
+    }
+}

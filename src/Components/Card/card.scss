@@ -1,0 +1,139 @@
+.card{
+    height: 29rem;
+    width: 34rem;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow:0 0 2px rgb(204, 202, 202);
+    &:nth-child(1){
+        margin-right: 2rem;
+    }
+    &:nth-child(3){
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+    display: inline-block;
+
+
+    &__details{
+        height: 29rem;
+        display: flex;
+        flex-direction: column;
+
+        &--image{
+            background-color: bisque;
+            height: 14rem;
+           
+            &-src{
+                background-size: top;
+        
+                object-fit: cover;
+                height: 14rem;
+                width: 34rem;
+            }
+            &-modal{
+                position: relative;
+                .modal-view{
+                    position: absolute;
+                    height: 14rem;
+                    background-color: black;
+                    top: 0;
+                    left: 0;
+                    width: 34rem;
+                    opacity: .7;
+                }
+                .modal-text{
+                    position: absolute;
+                    cursor: pointer;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                    color: #fff;
+                    font-size: 14px;
+                    display: block;
+                }
+            }
+        }
+        &--content{
+            height: 16rem;
+
+            padding: 1rem 2rem;
+        }
+       
+
+    }
+
+    @media (max-width: 59.35em) {
+        height: 20rem;
+        width: 20rem;
+        background-color: #fff;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow:0 0 2px rgb(204, 202, 202);
+        &:nth-child(1){
+            margin-right: 0;
+        }
+        &:nth-child(3){
+            margin-right:0;
+            margin-top: 0;
+        }
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+}
+.content--context{
+    font-size: 8px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: rgb(184, 189, 196);
+}
+
+.content--description{
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    color: rgb(184, 189, 196);
+}
+.content--heading{
+    @media (max-width: 59.35em) {
+        text-align: center;
+    }
+    h1{
+        font-size: 15px;
+        @media (max-width: 59.35em) {
+            font-size: 10px;
+        }
+    }
+    .hover-state{
+        font-size: 15px;
+        cursor: pointer;
+        @media (max-width: 59.35em) {
+            font-size: 10px;
+            cursor: pointer;
+        }
+    }
+}
+.circle{
+    height: 7px;
+    width: 7px;
+    background-color: rgb(85, 185, 209);
+    border-radius: 50%;
+    display: inline-block;
+   
+
+    &::after{
+        content: "";
+        height: 7px;
+        width: 7px;
+        background-color: rgb(245, 195, 69);
+        margin-left: 1.1rem;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+}
+.modal-text{
+    display: none;
+}
