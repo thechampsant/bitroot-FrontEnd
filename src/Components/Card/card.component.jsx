@@ -7,6 +7,11 @@ const Card = (props) => {
             props.displayModal('modal-View',props.item);
         
     }
+    const convertT =(timeStamp) =>{
+        var timestamp = timeStamp
+        var date = new Date(timestamp);
+        return date.toDateString()
+    }
     return(
         <div className='card'>
             <div className="card__details">
@@ -30,7 +35,7 @@ const Card = (props) => {
                     </div>
                     <div className="content--description">
                         <p>{props.item.author.name} - {props.item.author.role}</p>
-                        <p>Time Stamp</p>
+                        <p>{convertT(props.item.date)}</p>
                     </div>
                 </div>
             </div>

@@ -57,10 +57,9 @@
         }
         &--content{
             height: 16rem;
-
             padding: 1rem 2rem;
+            margin: auto;
         }
-       
 
     }
 
@@ -85,7 +84,7 @@
 }
 .content--context{
     font-size: 8px;
-    margin-bottom: 2rem;
+   ;
     margin-top: 2rem;
     color: rgb(184, 189, 196);
 }
@@ -93,8 +92,8 @@
 .content--description{
     display: flex;
     justify-content: space-between;
-    font-size: 8px;
     color: rgb(184, 189, 196);
+
 }
 .content--heading{
     @media (max-width: 59.35em) {

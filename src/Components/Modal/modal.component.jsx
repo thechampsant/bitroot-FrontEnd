@@ -18,7 +18,7 @@ const Modal = (props) =>{
                     {props.item && <p>{props.item.content}</p>}
                     </div>
                     <div className="author">
-                        {props.item && <img src={props.item.author.avatar} alt='' className='author--avatar'/>}
+                        {props.item && <img src={props.item.author.avatar} alt='image' className='author--avatar'/>}
                         {props.item && <p>{props.item.author.name} - {props.item.author.role}</p>}
                     </div>
                 </div>
